@@ -35,7 +35,7 @@ public class JwtUtil {
      * manner.
      *
      * This @PostConstruct is all about timing.
-     * */
+     * **/
     @PostConstruct
     public void init(){ this.key = Keys.hmacShaKeyFor(jwtSecret.getBytes(StandardCharsets.UTF_8)); }
 

@@ -27,7 +27,7 @@ public class WebSecurityConfig {
      * them in other packages the Spring IoC container can inject them properly. As an example of this we
      * have the AuthenticationManager bean, even though I'm not using it inside WebSecurityConfig
      * class I use it in AuthenticationController.
-     * */
+     ** */
 
     @Autowired
     CustomUserDetailsService userDetailsService;
@@ -60,14 +60,14 @@ public class WebSecurityConfig {
                         e.authenticationEntryPoint(unauthorizedHandler)
                         /* Here I pass to Spring the object which will handle the response when
                         * a request is not valid.
-                        *  */
+                        **  */
                 )
                 .sessionManagement( s ->
                         s.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                         /* Since we are implementing a REST api we use this Session Creation Policy
                         *  of STATELESS. Due to we are not going to use cookies or sessions for the
                         *  clients who interact with the api.
-                        * */
+                        ** */
                 )
                 .authorizeHttpRequests( a ->
                     a.requestMatchers(
@@ -82,7 +82,7 @@ public class WebSecurityConfig {
         *
         *  Because we are using JWT authentication, and we are looking forward to authenticate the user now,
         *  before Spring tries to look for a traditional session or login form.
-        * */
+        ** */
 
         return http.build();
     }

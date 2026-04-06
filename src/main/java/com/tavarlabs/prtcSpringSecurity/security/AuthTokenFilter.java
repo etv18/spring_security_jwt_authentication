@@ -32,7 +32,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     *
     * So basically it lets spring know it can treat the request as valid until
     * the end of its way.
-    * */
+    ** */
 
     public static final String BEARER_ = "Bearer ";
 
@@ -70,7 +70,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 
         filterChain.doFilter(request, response); /* needed for the next filter chain, without this the client request
             won't reach other filters therefore it'll never reach the controller.
-         */
+         **/
     }
 
     private String parseJwt(HttpServletRequest request) {

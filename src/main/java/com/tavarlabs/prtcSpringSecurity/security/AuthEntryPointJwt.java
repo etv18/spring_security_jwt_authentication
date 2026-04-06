@@ -32,7 +32,8 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
     *   - AuthenticationException authException: This contains the cause, it lets you know why the client
     *       failed. If "Bad Credentials", "Full authentication is required", etc...
     *
-    * */
+    ** */
+
 
     @Override
     public void commence(
